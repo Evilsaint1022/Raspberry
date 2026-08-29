@@ -156,7 +156,7 @@ client.on("messageCreate", async (message) => {
 });
 
 const handleTerminationSignal = (signal) => {
-    console.log(`Received ${signal}, shutting down...`.bold.yellow);
+    console.log(`Received ${signal}, Shutting Down Gracefully...`.bold.yellow);
     process.exit(0);
 };
 
