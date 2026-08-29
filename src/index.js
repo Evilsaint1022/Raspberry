@@ -156,11 +156,8 @@ client.on("messageCreate", async (message) => {
 });
 
 const handleTerminationSignal = (signal) => {
-    console.log(`Received ${signal}, shutting down gracefully...`.bold.yellow);
-    shutdownBot(client, {
-    exitCode: 0,
-    reason: signal
-  });
+    console.log(`Received ${signal}, shutting down...`.bold.yellow);
+    process.exit(0);
 };
 
 process.once('SIGTERM', () => {
