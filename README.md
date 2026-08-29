@@ -14,7 +14,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 ![Raspberry Pi](https://img.shields.io/badge/Raspberry%20Pi-C51A4A?logo=raspberrypi&logoColor=white)
 
-Welcome to **Raspberry** - This is a simple Discord reaction bot, developed primarily for the purpose of learning how to host applications on a Raspberry Pi.
+**Welcome to Raspberry** - _This is a simple Discord reaction bot, developed primarily for the purpose of learning how to host applications on a Raspberry Pi._
 
 🔸**This code is free to use.**  
 🔸**Currently Running on a Rasberry Pi**  
