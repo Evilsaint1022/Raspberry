@@ -87,8 +87,9 @@ setInterval(() => {
     client.user.setActivity(activity, { type: ActivityType.Custom });
 }, 5000);
 
-    // ReactionCore is Online!
+    // Raspberry is Online!
     console.log(`🌿・${client.user.tag} Is Online!`.bold.white);
+    console.log(`Successfully Finished Startup`.bold.white);
 });
 
 // Interaction Command Handler -----------------------------------------------------------------------------------------------------
@@ -155,7 +156,11 @@ client.on("messageCreate", async (message) => {
 });
 
 const handleTerminationSignal = (signal) => {
-  console.log(`Received ${signal}, shutting down gracefully...`.bold.yellow);
+    console.log(`Received ${signal}, shutting down gracefully...`.bold.yellow);
+    shutdownBot(client, {
+    exitCode: 0,
+    reason: signal
+  });
 };
 
 process.once('SIGTERM', () => {

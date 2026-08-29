@@ -1,3 +1,4 @@
+require('dotenv').config({ quiet: true });
 const Table = require('cli-table3');
 
 module.exports = (client) => {
@@ -19,5 +20,7 @@ module.exports = (client) => {
         table.push([guild.name, guild.id, guild.memberCount]);
     });
 
+    if (process.env.DEV_MODE == "true") {
     console.log(table.toString());
+    }
 };

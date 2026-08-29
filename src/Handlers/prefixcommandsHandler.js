@@ -1,3 +1,4 @@
+require('dotenv').config({ quiet: true });
 const fs = require("fs").promises;
 const path = require("path");
 const { Collection } = require("discord.js");
@@ -99,7 +100,9 @@ module.exports = async (client) => {
       console.error(`Error reading ${folder} folder:`, err);
     }
   }
-
-  // console.log(table.toString());
-  // console.log('\x1b[37m%s\x1b[0m', '(✅・Successfully Loaded Prefix Commands)'.bold.green);
+  // Print the table of prefix commands and a success message
+  if (process.env.DEV_MODE == "true") {
+  console.log(table.toString());
+  console.log('\x1b[37m%s\x1b[0m', '(✅・Successfully Loaded Prefix Commands)'.bold.green);
+  }
 };
