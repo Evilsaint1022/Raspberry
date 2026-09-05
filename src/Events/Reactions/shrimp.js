@@ -4,7 +4,7 @@ module.exports = {
     name: 'messageCreate', // Event name to listen for new messages
     once: false, // Set to false to allow multiple messages to trigger this event
     async execute(message) {
-
+        if (!message.guild) return;
         if (message.author.bot) return;
         if (message.webhookId) return;
         if (message.content.includes(':')) return;
